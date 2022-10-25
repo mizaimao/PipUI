@@ -1,0 +1,8 @@
+setuptools
+numpy
+pyyaml==5.4.1
+mypy
+tqdm
+opencv-python
+
+# opencv-python will be installed from source

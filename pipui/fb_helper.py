@@ -11,7 +11,7 @@ WIDTH: int = 320
 
 # Used for 32bit color, which is not the rpi cheap ass display (RGB565)
 # FB = np.memmap('/dev/fb0', dtype='uint8',mode='w+', shape=(h,w,c)) 
-FB: np.ndarray = np.memmap("/dev/fb0", dtype=np.uint16, mode="w+", shape=(HEIGHT, WIDTH))
+#FB: np.ndarray = np.memmap("/dev/fb0", dtype=np.uint16, mode="w+", shape=(HEIGHT, WIDTH))
 
 
 def convert_RGB(im: np.ndarray) -> np.ndarray:
@@ -40,7 +40,7 @@ def display(arr: np.ndarray):
     assert len(arr.shape) == 3
     height, width, channel = arr.shape
     assert (height, width) == (HEIGHT, WIDTH), f"Image shape {arr.shape} does not match that of display ({(HEIGHT, WIDTH)})."
-    FB[:] = convert_BGR(arr)
+    #FB[:] = convert_BGR(arr)
 
 
 # test_background: np.ndarray = np.full((HEIGHT, WIDTH, 3), (255, 255, 255), dtype=np.uint8)

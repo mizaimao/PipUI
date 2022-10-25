@@ -3,18 +3,18 @@ import yaml
 
 from interface import UIConfig, preprocess_ui
 from painter import PipUI
-from fb_helper import display
+
 
 def main():
     config: UIConfig = UIConfig(**yaml.safe_load(open("default.yaml")))
     ui_object = preprocess_ui(config=config)
 
     pip_ui: PipUI = PipUI(
-        width=320,
-        height=240
+        width=1280,
+        height=800
     )
-    display(pip_ui.retrive_image())
-    return
+    pip_ui.show()
+
 
 if __name__ == "__main__":
     main()

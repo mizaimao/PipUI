@@ -1,0 +1,25 @@
+# top level elements are tabs
+ATAB1:
+  BTAB1:
+    CTAB1:
+      components:
+        - a
+    CTAB2:
+      components:
+        - aa
+        - ab
+    CTAB3:
+      components:
+        - c
+  BTAB2:
+    CTAB1:
+      components:
+        - ba
+        - bb
+    CTAB2:
+      components:
+        - bba
+    CTAB3:
+      components:
+        - bbc
+

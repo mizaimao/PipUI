@@ -11,7 +11,8 @@ def main():
 
     pip_ui: PipUI = PipUI(
         width=1280,
-        height=800
+        height=800,
+        dots=[ui_object]
     )
     pip_ui.show()
 
